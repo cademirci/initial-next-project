@@ -1,0 +1,108 @@
+@import "@/global-styles/element-selectors.css";
+
+:root {
+  --black: 7, 9, 12;
+  --white: 242, 247, 252;
+
+  --antracite-darker: 14, 16, 20;
+  --antracite-dark: 24, 27, 33;
+  --antracite: 42, 46, 54;
+
+  --silver-light-brighter: 228, 232, 236;
+  --silver-light: 216, 220, 224;
+  --silver: 159, 166, 170;
+
+  --frosted-steel: 105, 117, 129;
+
+  --brandcolor: 112, 208, 192; 
+  --brandcolor-on-dark: 112, 208, 192;
+  --brandcolor-on-light: 64, 176, 144;
+
+  --background: rgb(var(--white));
+  --foreground: rgb(var(--antracite-darker));
+  --foreground-strong: rgb(var(--antracite-dark));
+  --highlight: rgb(var(--brandcolor-on-light));
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: rgb(var(--antracite-darker));
+    --foreground: rgb(var(--silver-light));
+    --foreground-strong: rgb(var(--silver-light-brighter));
+    --highlight: rgb(var(--brandcolor));
+  }
+}
+
+/* Tailwind-like global class declarations for 
+   commonly used properties */
+
+.foreground { color: var(--foreground); }
+.frosted-steel { color: rgb(var(--frosted-steel)); }
+
+.m-1  { margin: 1rem;   }
+.mx-1 { margin: 0 1rem; }
+.my-1 { margin: 1rem 0; }
+.m-auto { margin: auto; }
+
+.p-1  { padding: 1rem;   }
+.px-1 { padding: 0 1rem; } 
+.py-1 { padding: 1rem 0; }
+
+.flex, .flex-start, .flex-end, .flex-between {
+  display: flex;
+  gap: 1rem;
+}
+.flex-start { justify-content: flex-start; }
+.flex-end { justify-content: flex-end; }
+.flex-between { justify-content: space-between; }
+
+.invisibleDiv {
+  display: none;
+}
+
+.debug { border: 1px solid red; }
+
+/* responsive design */
+
+/* Mobile */
+@media (max-width: 700px) {
+  .responsive-width,
+  .responsive-width-wider {
+    width: 100%;
+  }
+  .responsive-width-narrow {
+    width: 95%;
+  }
+}
+
+/* Tablet and smaller desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+  .responsive-width-narrow {
+    width: 75%;
+  }
+  .responsive-width {
+    width: 85%;
+  }
+  .responsive-width-wider {
+    width: 95%;
+  }
+}
+
+/* Desktop and wider */
+@media (min-width: 1121px) {
+  .responsive-width-narrow {
+    width: calc(1121px * (66/100));
+  }
+  .responsive-width {
+    width: calc(1121px * (85/100));
+  }
+  .responsive-width-wider {
+    width: 1121px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}

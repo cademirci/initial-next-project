@@ -1,0 +1,132 @@
+/* This CSS module is also included in the global styles because 
+   it contains the styles for always-on-page components such as 
+   the navbar, footer, and classes like the main page container.
+*/
+
+.templateContainer {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+
+  --navbar-background: rgba(var(--silver-light-brighter), .8);
+  --navbar-foreground: rgb(var(--antracite));
+  --footer-background: rgb(var(--silver-light));
+  --footer-foreground: rgb(var(--frosted-steel));
+  --menu-background: rgba(var(--silver-light-brighter), .8);
+}
+
+@media (prefers-color-scheme: dark) {
+  .templateContainer {
+    --navbar-background: rgba(var(--antracite-dark), .8);
+    --navbar-foreground: rgb(var(--silver));
+    --footer-background: rgb(var(--antracite-dark));
+    --footer-foreground: rgb(var(--frosted-steel));
+    --menu-background: rgba(var(--antracite-dark), .8);
+  }
+}
+
+.mainPageContainer {
+  flex: 1;
+  padding: 7rem 1rem 4rem 1rem;
+}
+
+.mainPageContainer img {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+  padding: 1rem 0;
+}
+
+/* Navigation Bar */
+
+.navbar a, .footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.navbar {
+  background: var(--navbar-background);
+  width: 100%;
+  position: fixed;
+  z-index: 1; /* otherwise links in content remain bright
+      even they are behind the semi-transparent navbar */
+}
+
+.navbarTabs {
+  font-size: .9em;
+  color: var(--navbar-foreground);
+}
+
+.hamburgerNav {
+  display: none;
+}
+
+.menuClosed,
+.menuOpen {
+  flex-direction: column;
+  gap: 1rem;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 3rem;
+  left: 0;
+  background-color: var(--menu-background);
+  font-size: 1.2em;
+  backdrop-filter: blur(2px);
+  transition: height .5s ease, padding .5s ease;
+}
+
+.menuClosed {
+  height: 0;
+  padding: 0;
+}
+
+.menuClosed a, .menuClosed p {
+  display: none;
+}
+
+.hamburgerBarsClosed, .hamburgerBarsCross {
+  flex-direction: column;
+  justify-content: center;
+  gap: .5rem;
+  width: 1.5rem;
+}
+
+.bar {
+  height: 2px;
+  border-radius: 1px;
+  background-color: rgb(var(--frosted-steel));
+  transition: all .5s ease;
+}
+
+.hamburgerBarsCross .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(0, 7px);
+}
+
+.hamburgerBarsCross .bar:nth-child(2) {
+  transform: rotate(45deg) translate(0, -7px);
+}
+
+/* Footer */
+
+.footer {
+  width: 100%;
+  background: var(--footer-background);
+}
+
+.footerContent {
+  color: var(--footer-foreground);
+  font-size: .9em;
+  text-align: right;
+}
+
+@media (max-width: 700px) {
+  .hamburgerNav {
+    display: flex;
+  }
+
+  .navbarTabs {
+    display: none;
+  }
+}
