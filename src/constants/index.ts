@@ -7,18 +7,19 @@ export const urls = {
 }
 
 export const navigation = [
-  { label: 'Home', path: '/' },
-  { label: 'About', path: '/' },
   { label: 'Services', path: '/' },
+  { label: 'About', path: '/' },
   { label: 'Contact', path: '/' },
   { label: 'Blog', path: '/' },
+  { label: 'Sign in', path: '/login' },
   // other navbar items
 ]
 
 export const footerLinks = [
-  { label: 'About', path: '/' },
+  { label: 'Home', path: '/' },
   { label: 'Service 1', path: '/' },
   { label: 'Service 2', path: '/' },
+  { label: 'About', path: '/' },
   { label: 'Contact', path: '/' },
   { label: 'Blog', path: '/' },
   // other footer items

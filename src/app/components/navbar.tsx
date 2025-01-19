@@ -8,7 +8,11 @@ export default function Navbar() {
   return (
     <nav className={`${style.navbar}`}>
       <div className={`${style.navbarContainer} responsive-width-wider p-1 m-auto flex-between`}>
-        <div>LOGO</div>
+        <a href='/'>
+          <div>
+            LOGO
+          </div>
+        </a>
         <div className={`${style.navbarTabs} flex`}>
           {navigation.map((item, index) => 
             <Link key={index} href={item.path}>{item.label}</ Link> 
