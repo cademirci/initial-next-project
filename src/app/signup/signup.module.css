@@ -1,0 +1,9 @@
+.loginForm {
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.loginInput {
+  min-width: 16rem;
+}
