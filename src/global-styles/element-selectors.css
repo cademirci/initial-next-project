@@ -166,6 +166,7 @@ li:has(> input[checked]) {
 }
 
 input {
+  padding: .5rem;
   background-color: rgb(var(--antracite-darker));
   color: rgb(var(--foreground));
   font-size: .9em;
@@ -179,7 +180,7 @@ input:hover {
 }
 
 input::placeholder {
-  color: rgb(var(--silver));
+  color: rgb(var(--frosted-steel));
 }
 
 table {
