@@ -1,0 +1,55 @@
+.post {
+  margin: 3rem 0;
+}
+
+.post h3 {
+  padding: 0 0 .5rem 0;
+}
+
+.postSignatureContainer {
+  width: 20%;
+  text-align: right;
+  max-height: fit-content;
+}
+
+.postLink a {
+  color: rgb(var(--highlight-dark));
+}
+
+.postBodyContainer {
+  width: 80%;
+  background-color: rgb(var(--antracite-dark));
+  border-radius: var(--border-radius);
+}
+
+@media (max-width: 700px) {
+  .post {
+    display: block;
+  }
+
+  .postSignatureContainer,
+  .postBodyContainer {
+    width: inherit;
+    text-align: inherit;
+  }
+
+  .postSignatureContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .postSignatureContainer h3 {
+    padding: 0;
+  }
+
+  .postSignatureLeftWing {
+    max-width: 80%;
+  }
+
+  .postBodyContainer {
+    border-radius: 0;
+    margin: 0 -1rem;
+  }
+
+}

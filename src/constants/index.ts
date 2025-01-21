@@ -10,7 +10,7 @@ export const navigation = [
   { label: 'Services', path: '/' },
   { label: 'About', path: '/' },
   { label: 'Contact', path: '/' },
-  { label: 'Blog', path: '/' },
+  { label: 'Blog', path: '/blog' },
   { label: 'Sign in', path: '/login' },
   // other navbar items
 ]
