@@ -13,12 +13,12 @@
 }
 
 .postLink a {
-  color: rgb(var(--highlight-dark));
+  color: rgb(var(--highlight));
 }
 
 .postBodyContainer {
   width: 80%;
-  background-color: rgb(var(--antracite-dark));
+  background-color: rgb(var(--alt-background));
   border-radius: var(--border-radius);
 }
 

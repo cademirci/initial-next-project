@@ -172,7 +172,7 @@ li:has(> input[checked]) {
 
 input {
   padding: .5rem;
-  background-color: rgb(var(--antracite-darker));
+  background-color: rgb(var(--background));
   color: rgb(var(--foreground));
   font-size: .9em;
   outline: none;
@@ -181,7 +181,7 @@ input {
 }
 
 input:hover {
-  background-color: rgb(var(--antracite-dark));
+  background-color: var(--alt-background);
 }
 
 input::placeholder {

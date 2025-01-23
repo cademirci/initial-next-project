@@ -9,7 +9,7 @@ export default async function Blog() {
 
   return (
     <div>
-      {allPosts.map(({ slug, metadata, contentHtml }) => {
+      {allPosts.map(({ slug, metadata }) => {
         const date = new Date(metadata.date).toLocaleDateString()
         return (
           <div className={`${style.post} flex`} key={slug}>
@@ -18,7 +18,9 @@ export default async function Blog() {
                 <small>{date}</small>
                 <h3>{metadata.title}</h3>
               </div>
-              <Link href={`/${slug}`}><FaArrowUpRightFromSquare /></Link>
+              <span className={style.postLink}>
+                <Link href={`/${slug}`}><FaArrowUpRightFromSquare /></Link>
+              </span>
             </div>
             <div className={`${style.postBodyContainer} px-1`} >
               {metadata.description && <p>{metadata.description}</p>}

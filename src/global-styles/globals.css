@@ -30,21 +30,23 @@
   --frosted-steel: 105, 117, 129;
 
   --brandcolor: 112, 208, 192; 
-  --brandcolor-on-dark: 112, 208, 192;
+  --brandcolor-on-dark: 96, 192, 176;
   --brandcolor-on-light: 64, 176, 144;
 
-  --background: rgb(var(--white));
-  --foreground: rgb(var(--antracite-darker));
-  --foreground-strong: rgb(var(--antracite-dark));
-  --highlight: rgb(var(--brandcolor-on-light));
+  --background: var(--white);
+  --alt-background: var(--silver-light-brighter);
+  --foreground: var(--antracite-darker);
+  --foreground-strong: var(--antracite-dark);
+  --highlight: var(--brandcolor-on-light);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: rgb(var(--antracite-darker));
-    --foreground: rgb(var(--silver-light));
-    --foreground-strong: rgb(var(--silver-light-brighter));
-    --highlight: rgb(var(--brandcolor));
+    --background: var(--antracite-darker);
+    --alt-background: var(--antracite-dark);
+    --foreground: var(--silver-light);
+    --foreground-strong: var(--silver-light-brighter);
+    --highlight: var(--brandcolor-on-dark);
   }
 }
 
@@ -75,9 +77,9 @@
 .default-button {
   display: flex;
   gap: .75rem;
-  color: rgb(var(--foreground-rgb));
-  border: 2px solid rgb(var(--antracite));
-  background-color: rgb(var(--black));
+  color: rgb(var(--background));
+  border: none;
+  background-color: rgb(var(--highlight));
   font-size: .9em;
   cursor: pointer;
   padding: .75rem 2rem;
@@ -86,7 +88,7 @@
 }
 
 .default-button:hover {
-  background-color: rgb(var(--antracite-dark));
+  background-color: rgb(var(--brandcolor));
 }
 
 .debug { border: 1px solid red; }
