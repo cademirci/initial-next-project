@@ -2,7 +2,7 @@
 
 ---
 
-A basic Next.js 15 app router project with pre-built template components.
+A Next.js 15 App Router project with pre-built components, in order to start a project with a professional design and basic features quickly.
 
 While currently presented as a professionally prepared template, I plan to commit additional features such as authentication, database integration, i18n, etc.
 
