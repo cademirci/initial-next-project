@@ -1,8 +1,21 @@
 # Initial Next.js Project
 
+---
+
 A basic Next.js 15 app router project with pre-built template components.
 
 While currently presented as a professionally prepared template, I plan to commit additional features such as authentication, database integration, i18n, etc.
+
+## Implemented Features
+
+- Automatic dark/light theme (adjusted based on the OS) and globally available dark and light color themes
+- Responsive navigation bar that collapses into a hamburger menu on mobile sizes and equally responsive footer
+- Scalable and flexible social media bar, utilizing the `react-icons` library
+- HTML element selectors restructured according to design principles
+- Pre-designed login and signup pages: Auth and DB is not ready, going to be implemented.
+- Blog structure 
+
+---
 
 ## Getting Started
 
@@ -80,15 +93,6 @@ src
   ├── content
   ├── global-styles
 ```
-
-## Implemented Features
-
-- Automatic dark/light theme (adjusted based on the OS) and globally available dark and light color themes
-- Responsive navigation bar that collapses into a hamburger menu on mobile sizes and equally responsive footer
-- Scalable and flexible social media bar, utilizing the `react-icons` library
-- HTML element selectors restructured according to design principles
-- Pre-designed login and signup pages: Auth and DB is not ready, going to be implemented.
-- Blog structure 
 
 ## Blog Content Structure
 
