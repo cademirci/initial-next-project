@@ -63,32 +63,22 @@ You can deploy the project to any hosting service that supports Node.js. For exa
 
 ## Project Structure
 
-The project structure is as follows after set up:
+The project structure (directories only) is as follows after set up:
 
 ```
 .
-├── .next/
-├── node_modules/
-├── public/
-├── src/
-│   ├── app/
-│   │   ├── components/
-│   │   ├── login/
-│   │   ├── signup/
-│   │   ├── favicon.ico
-│   │   ├── layout.tsx
-│   │   ├── page.tsx
-│   │   ├── template.tsx
-│   ├── constants/
-│   ├── global-styles/
-├── .gitignore
-├── eslint.config.mjs
-├── next-env.d.ts
-├── next.config.ts
-├── package-lock.json
-├── package.json
-├── README.md
-└── tsconfig.json
+public
+src
+  ├── app
+  │   ├── [slug]
+  │   ├── blog
+  │   ├── components
+  │   ├── lib
+  │   ├── login
+  │   ├── signup
+  ├── constants
+  ├── content
+  ├── global-styles
 ```
 
 ## Implemented Features
@@ -98,6 +88,32 @@ The project structure is as follows after set up:
 - Scalable and flexible social media bar, utilizing the `react-icons` library
 - HTML element selectors restructured according to design principles
 - Pre-designed login and signup pages: Auth and DB is not ready, going to be implemented.
+- Blog structure 
+
+## Blog Content Structure
+
+The `content` directory is designed to store Markdown files representing blog posts. These files are used to generate a blog system with the following features:
+
+### 1. Main Blog Page
+The main blog page dynamically lists all available blog posts by reading the Markdown files in the `content` directory. Each post's metadata (e.g., title, description, date) is extracted from the front matter of the Markdown files for display.
+
+### 2. Individual Post Pages
+Each blog post is accessible via a dynamic route based on its slug. This is achieved using the `[slug]` directory under `app`. The slug for each post is derived from the filename of the corresponding Markdown file in the `content` directory.
+
+### Workflow
+
+- **Adding a New Post**:  
+  To create a new blog post, simply add a Markdown file to the `content` directory. Ensure the file includes proper front matter for metadata, e.g.:
+
+  ```markdown
+  ---
+  title: "Your Blog Post Title"
+  description: "A brief description of your post."
+  date: "2025-01-23"
+  slug: "your-blog-post-title"
+  ---
+
+  Write your post content here...
 
 ## License
 
